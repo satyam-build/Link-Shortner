@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.get('/', async (req, res) => {
   const shortUrls = await ShortUrl.find()
-  res.render('index', { shortUrls: shortUrls })
+  res.render('server', { shortUrls: shortUrls })
 })
 
 app.post('/shortUrls', async (req, res) => {
